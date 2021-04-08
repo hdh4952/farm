@@ -238,6 +238,42 @@ harvesting = function(index) {
 
 milling = function() {
 	document.querySelector("#screen").innerHTML = `<h3>도정</h3>`
-	document.querySelector("#memo").innerHTML = `<h3>도정이란?</h3><br>도정이란 작물의 겉껍질인 왕겨와 속껍질인 겨층을 벗겨내 먹을 수 있게끔<br> 가공하는 것을 말한다.<br><br><a href="https://terms.naver.com/entry.naver?docId=5782158&cid=62861&categoryId=62861" target="_blank" style="text-decoration: none;">더 알아보기</a>`
-	document.querySelector("#screen").innerHTML += `<상토 배합> ${BedSoilScore}/100 <br><관개> ${waterScoreSum}/800`
+	document.querySelector("#memo").innerHTML = `<h3>도정이란?</h3><br>도정이란 작물의 겉껍질인 왕겨와 속껍질인 겨층을 벗겨내 먹을 수 있게끔<br> 가공하는 것을 말한다.<br><br><a href="https://terms.naver.com/entry.naver?docId=5782158&cid=62861&categoryId=62861" target="_blank" style="text-decoration: none;">더 알아보기</a>`;
+	document.querySelector("#screen").innerHTML += `   
+	<div style="display:flex;">
+		<div style="width:50%; height:80%; display:flex; flex-wrap: wrap" class="dragStart" id="drag">
+		</div>
+		<div style="width:50%; height:80%; display:flex; padding-top: 15%; justify-content: center;">
+     			<div id="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		</div>
+	</div>
+	`;
+	for(i=0 ; i<9 ; i++) {
+		document.querySelector('.dragStart').innerHTML += `<img id="rice${i}" data-id="벼" src="img/벼.png" draggable="true" ondragstart="drag(event)" style="width:80px;height:80px;display:inline;padding:20px;">`;	
+	}
 }
+
+let convert = {"벼": "현미", "현미": "백미"};
+
+function allowDrop(ev)    
+            {    
+                ev.preventDefault();    
+            }    
+    
+            function drag(ev)    
+            {    
+                ev.dataTransfer.setData("text", ev.target.id);    
+            }    
+    
+            function drop(ev)    
+            {    
+                ev.preventDefault();    
+                var data = ev.dataTransfer.getData("text");
+                let element = document.getElementById(data);
+                let parent = document.getElementById("drag");
+                parent.removeChild(element);
+                element.setAttribute('data-id', convert[element.getAttribute("data-id")]);
+                element.src = `img/${element.getAttribute("data-id")}.png`;
+                if (element.getAttribute("data-id") === "백미") element.setAttribute("draggable", false);
+                parent.appendChild(element);
+            }    

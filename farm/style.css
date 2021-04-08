@@ -44,3 +44,14 @@ body {
 	cursor: pointer;
 }
 
+#box {
+	width: 150px;    
+         	height: 150px;    
+         	border: 1px solid #aaaaaa;
+	
+}
+
+#box > img {
+	padding: 0 !important;
+}
+
