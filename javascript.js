@@ -96,7 +96,7 @@ bedSoil = function() {
 		</div>
 		<div class="bedSoilCreate">
 			<div style="display:flex; justify-content: center;">
-				<style="height:30px; width:30px;" src="./img/bedSoil1.jpg">
+				<img style="height:30px; width:30px;" src="./img/bedSoil1.jpg">
 				<div>부엽토 :&nbsp</div>
 				<div class="bedSoilCreate1">0%</div>
 			</div>
