@@ -96,22 +96,22 @@ bedSoil = function() {
 		</div>
 		<div class="bedSoilCreate">
 			<div style="display:flex; justify-content: center;">
-				<img style="height:30px; width:30px;" src="img/bedSoil1.jpg">
+				<img style="height:30px; width:30px;" src="./img/bedSoil1.jpg">
 				<div>부엽토 :&nbsp</div>
 				<div class="bedSoilCreate1">0%</div>
 			</div>
 			<div style="display:flex; justify-content: center;">
-				<img style="height:30px; width:30px;" src="img/bedSoil4.jpg">
+				<img style="height:30px; width:30px;" src="./img/bedSoil4.jpg">
 				<div>발효퇴비 :&nbsp</div>
 				<div class="bedSoilCreate4">0%</div>
 			</div>
 			<div style="display:flex; justify-content: center;">
-				<img style="height:30px; width:30px;" src="img/bedSoil2.jpg">
+				<img style="height:30px; width:30px;" src="./img/bedSoil2.jpg">
 				<div>모래 :&nbsp</div>
 				<div class="bedSoilCreate2">0%</div>
 			</div>
 			<div style="display:flex; justify-content: center;">
-				<img style="height:30px; width:30px;" src="img/bedSoil3.jpg">
+				<img style="height:30px; width:30px;" src="./img/bedSoil3.jpg">
 				<div>재 :&nbsp</div>
 				<div class="bedSoilCreate3">0%</div>
 			</div>
@@ -156,8 +156,8 @@ ricePlanting = function() {
 
 planting = function(index) {
 	randInt = Math.floor(Math.random() * 11);
-	if(randInt <= plantingPercent/10) document.querySelector(`#plantingBtn${index}`).innerHTML =`<img src="img/ricePlanting.jpg" style="height:80px; width:80px;">`;
-	else document.querySelector(`#plantingBtn${index}`).innerHTML =`<img src="img/ricePlantingFail.jpg" style="height:80px; width:80px;">`;
+	if(randInt <= plantingPercent/10) document.querySelector(`#plantingBtn${index}`).innerHTML =`<img src="./img/ricePlanting.jpg" style="height:80px; width:80px;">`;
+	else document.querySelector(`#plantingBtn${index}`).innerHTML =`<img src="./img/ricePlantingFail.jpg" style="height:80px; width:80px;">`;
 	plantingCnt++;
 	if(plantingCnt === 30) document.querySelector('#screen').innerHTML += `<input type="button" value="모내기 완료" class="btn" onclick="riceGrowth()">`
 }
@@ -172,7 +172,7 @@ rGGdrawing = function(){
 riceGrowth = function() {
 	document.querySelector('#screen').innerHTML = `
 		<div>${GrowthPhase[riceGrowthGraph]}<br><div class="rGG"></div></div>
-		<div style="height: 69%;width:100%;" class="riceImg"><img src="img/${waterHeight}cm.png" style="width:100%; height:80%;"></div>
+		<div style="height: 69%;width:100%;" class="riceImg"><img src="./img/${waterHeight}cm.png" style="width:100%; height:80%;"></div>
 		<div class="waterHeightDraw">물깊이 : ${waterHeight}cm</div>
 		<div style="height: 20%; width:100%">
 			<input type="button" value="+" class="btn" onclick="water(0)">
@@ -192,7 +192,7 @@ water = function(idx) {
 	else {
 		if(waterHeight > 0) waterHeight--;
 	}
-	document.querySelector('.riceImg').innerHTML = `<img src="img/${waterHeight}cm.png" style="width:100%; height:80%;">`;
+	document.querySelector('.riceImg').innerHTML = `<img src="./img/${waterHeight}cm.png" style="width:100%; height:80%;">`;
 	document.querySelector('.waterHeightDraw').innerHTML = `물깊이 : ${waterHeight}cm`;
 }
 
@@ -220,7 +220,7 @@ waterSelect = function() {
 			<div style="text-align: center;"><h1>벼 생장 기록</h1></div>	
 			<div class="record"></div>	
 		`;
-		document.querySelector('#memo').innerHTML = `<img src="src/생육단계별 물깊이(정답).bmp" style="width:100%; height:100%">`
+		document.querySelector('#memo').innerHTML = `<img src="./src/생육단계별 물깊이(정답).bmp" style="width:100%; height:100%">`
 		waterScoreCal();
 		for(i=1 ; i<9 ; i++) {
 			document.querySelector(".record").innerHTML += `${GrowthPhase[i]} : ${waterScore[i-1]}점 // 물깊이: ${waterRecord[i-1]}cm<br>`; 
@@ -238,7 +238,7 @@ harvest = function() {
 	for(i=0 ; i<30 ; i++){
 		document.querySelector('.harvesting').innerHTML += `
 			<div style="display:flex;width:80px;">
-				<div id="harvestingImg${i}"><img onclick="harvesting(${i})" src="img/riceHarvesting.jpg" style="height:80px; width:80px;"></div>
+				<div id="harvestingImg${i}"><img onclick="harvesting(${i})" src="./img/riceHarvesting.jpg" style="height:80px; width:80px;"></div>
 			</div>`;
 	}
 }
@@ -258,13 +258,13 @@ milling = function() {
 		</div>
 		<div style="width:50%; height:80%; display:flex; padding-top: 15%; justify-content: center;">
 			>>
-     			<div id="box" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="img/도정기.jpg" style="width:100%;height:100%;"></div>
+     			<div id="box" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="./img/도정기.jpg" style="width:100%;height:100%;"></div>
 		</div>
 	</div>
 	<div class="completeMilling"></div>
 	`;
 	for(i=0 ; i<9 ; i++) {
-		document.querySelector('.dragStart').innerHTML += `<img id="rice${i}" data-id="벼" src="img/벼.png" draggable="true" ondragstart="drag(event)" style="width:80px;height:80px;display:inline;padding:20px;">`;	
+		document.querySelector('.dragStart').innerHTML += `<img id="rice${i}" data-id="벼" src="./img/벼.png" draggable="true" ondragstart="drag(event)" style="width:80px;height:80px;display:inline;padding:20px;">`;	
 	}
 }
 
@@ -302,10 +302,10 @@ function sellRice() {
 	document.querySelector('#memo').innerHTML = ``;
 	document.querySelector('#screen').innerHTML = `
 		획득한 백미:<br>
-		<img src="img/SSR.jpg" class="grade"> X ${ssrRice}개 (${ssrDrawPercent}%)<br>
-		<img src="img/SR.jpg" class="grade"> X ${srRice}개 (${srDrawPercent-ssrDrawPercent}%)<br>
-		<img src="img/R.jpg" class="grade"> X ${rRice}개 (${rDrawPercent-srDrawPercent}%)<br>
-		<img src="img/N.jpg" class="grade"> X ${nRice}개 (${100-rDrawPercent}%)<br>
+		<img src="./img/SSR.jpg" class="grade"> X ${ssrRice}개 (${ssrDrawPercent}%)<br>
+		<img src="./img/SR.jpg" class="grade"> X ${srRice}개 (${srDrawPercent-ssrDrawPercent}%)<br>
+		<img src="./img/R.jpg" class="grade"> X ${rRice}개 (${rDrawPercent-srDrawPercent}%)<br>
+		<img src="./img/N.jpg" class="grade"> X ${nRice}개 (${100-rDrawPercent}%)<br>
 		<input type="button" class="btn" value="백미 뽑기" onclick="drawRice()">&nbsp남은 백미 : ${basicRice}개
 		<div class="lastStep"></div>
 	`;
@@ -329,10 +329,10 @@ function lastSell() {
 	document.querySelector('#screen').innerHTML = `판매`;
 	document.querySelector('#screen').innerHTML = `
 		보유중인 백미:<br>
-		<img src="img/SSR.jpg" class="grade"> X ${ssrRice}개&nbsp<input type="button" class="btn" value="판매" onclick="soldRice(1)"><br>
-		<img src="img/SR.jpg" class="grade"> X ${srRice}개&nbsp<input type="button" class="btn" value="판매" onclick="soldRice(2)"><br>
-		<img src="img/R.jpg" class="grade"> X ${rRice}개&nbsp<input type="button" class="btn" value="판매" onclick="soldRice(3)"><br>
-		<img src="img/N.jpg" class="grade"> X ${nRice}개&nbsp<input type="button" class="btn" value="판매" onclick="soldRice(4)"><br>
+		<img src="./img/SSR.jpg" class="grade"> X ${ssrRice}개&nbsp<input type="button" class="btn" value="판매" onclick="soldRice(1)"><br>
+		<img src="./img/SR.jpg" class="grade"> X ${srRice}개&nbsp<input type="button" class="btn" value="판매" onclick="soldRice(2)"><br>
+		<img src="./img/R.jpg" class="grade"> X ${rRice}개&nbsp<input type="button" class="btn" value="판매" onclick="soldRice(3)"><br>
+		<img src="./img/N.jpg" class="grade"> X ${nRice}개&nbsp<input type="button" class="btn" value="판매" onclick="soldRice(4)"><br>
 	`;
 }
 
