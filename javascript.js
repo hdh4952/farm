@@ -287,7 +287,7 @@ function allowDrop(ev)
                 let parent = document.getElementById("drag");
                 parent.removeChild(element);
                 element.setAttribute('data-id', convert[element.getAttribute("data-id")]);
-                element.src = `img/${element.getAttribute("data-id")}.PNG`;
+                element.src = `img/${element.getAttribute("data-id")}.png`;
                 if (element.getAttribute("data-id") === "백미") element.setAttribute("draggable", false);
                 parent.appendChild(element);
 	   if(convertCnt === 18) {
