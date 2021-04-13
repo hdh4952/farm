@@ -96,22 +96,22 @@ bedSoil = function() {
 		</div>
 		<div class="bedSoilCreate">
 			<div style="display:flex; justify-content: center;">
-				<img style="height:30px; width:30px;" src="./img/bedSoil1.jpg">
+				<img style="height:30px; width:30px;" src="img/bedSoil1.jpg">
 				<div>부엽토 :&nbsp</div>
 				<div class="bedSoilCreate1">0%</div>
 			</div>
 			<div style="display:flex; justify-content: center;">
-				<img style="height:30px; width:30px;" src="./img/bedSoil4.jpg">
+				<img style="height:30px; width:30px;" src="img/bedSoil4.jpg">
 				<div>발효퇴비 :&nbsp</div>
 				<div class="bedSoilCreate4">0%</div>
 			</div>
 			<div style="display:flex; justify-content: center;">
-				<img style="height:30px; width:30px;" src="./img/bedSoil2.jpg">
+				<img style="height:30px; width:30px;" src="img/bedSoil2.jpg">
 				<div>모래 :&nbsp</div>
 				<div class="bedSoilCreate2">0%</div>
 			</div>
 			<div style="display:flex; justify-content: center;">
-				<img style="height:30px; width:30px;" src="./img/bedSoil3.jpg">
+				<img style="height:30px; width:30px;" src="img/bedSoil3.jpg">
 				<div>재 :&nbsp</div>
 				<div class="bedSoilCreate3">0%</div>
 			</div>
