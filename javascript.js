@@ -1,7 +1,7 @@
 ﻿BedSoilScore = 0;
 strain = "";
 plantingPercent = 0;
-strainInfo = [`<h1>영호진미</h1><br><img src="img/영호진미.jpg" style="height:150px;width:450px;"><br><h1>재배 적응지역</h1><br><img src="img/영호진미재배지역.jpg">`, `<h1>신동진</h1><br><img src="img/신동진.jpg" style="height:150px;width:450px;"><br><h1>재배 적응지역</h1><br><img src="img/신동진재배지역.jpg">`, `<h1>오대</h1><br><img src="img/오대.jpg" style="height:150px;width:450px;"><br><h1>재배 적응지역</h1><br><img src="img/오대재배지역.jpg">`]
+strainInfo = [`<h1>영호진미</h1><br><img src="./img/영호진미.jpg" style="height:150px;width:450px;"><br><h1>재배 적응지역</h1><br><img src="./img/영호진미재배지역.jpg">`, `<h1>신동진</h1><br><img src="./img/신동진.jpg" style="height:150px;width:450px;"><br><h1>재배 적응지역</h1><br><img src="./img/신동진재배지역.jpg">`, `<h1>오대</h1><br><img src="./img/오대.jpg" style="height:150px;width:450px;"><br><h1>재배 적응지역</h1><br><img src="./img/오대재배지역.jpg">`]
 selectBedSoil = [0, 0, 0, 0];
 selectBedSoilSum = 0;
 isSelectBedSoil = true;
@@ -96,7 +96,7 @@ bedSoil = function() {
 		</div>
 		<div class="bedSoilCreate">
 			<div style="display:flex; justify-content: center;">
-				<img style="height:30px; width:30px;" src="./img/bedSoil1.jpg">
+				<style="height:30px; width:30px;" src="./img/bedSoil1.jpg">
 				<div>부엽토 :&nbsp</div>
 				<div class="bedSoilCreate1">0%</div>
 			</div>
