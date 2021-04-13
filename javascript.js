@@ -172,7 +172,7 @@ rGGdrawing = function(){
 riceGrowth = function() {
 	document.querySelector('#screen').innerHTML = `
 		<div>${GrowthPhase[riceGrowthGraph]}<br><div class="rGG"></div></div>
-		<div style="height: 69%;width:100%;" class="riceImg"><img src="./img/${waterHeight}cm.PNG" style="width:100%; height:80%;"></div>
+		<div style="height: 69%;width:100%;" class="riceImg"><img src="./img/${waterHeight}cm.png" style="width:100%; height:80%;"></div>
 		<div class="waterHeightDraw">물깊이 : ${waterHeight}cm</div>
 		<div style="height: 20%; width:100%">
 			<input type="button" value="+" class="btn" onclick="water(0)">
@@ -192,7 +192,7 @@ water = function(idx) {
 	else {
 		if(waterHeight > 0) waterHeight--;
 	}
-	document.querySelector('.riceImg').innerHTML = `<img src="./img/${waterHeight}cm.PNG" style="width:100%; height:80%;">`;
+	document.querySelector('.riceImg').innerHTML = `<img src="./img/${waterHeight}cm.png" style="width:100%; height:80%;">`;
 	document.querySelector('.waterHeightDraw').innerHTML = `물깊이 : ${waterHeight}cm`;
 }
 
