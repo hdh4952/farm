@@ -172,7 +172,7 @@ rGGdrawing = function(){
 riceGrowth = function() {
 	document.querySelector('#screen').innerHTML = `
 		<div>${GrowthPhase[riceGrowthGraph]}<br><div class="rGG"></div></div>
-		<div style="height: 69%;width:100%;" class="riceImg"><img src="./img/${waterHeight}cm.png" style="width:100%; height:80%;"></div>
+		<div style="height: 69%;width:100%;" class="riceImg"><img src="./img/${waterHeight}cm.PNG" style="width:100%; height:80%;"></div>
 		<div class="waterHeightDraw">물깊이 : ${waterHeight}cm</div>
 		<div style="height: 20%; width:100%">
 			<input type="button" value="+" class="btn" onclick="water(0)">
@@ -192,7 +192,7 @@ water = function(idx) {
 	else {
 		if(waterHeight > 0) waterHeight--;
 	}
-	document.querySelector('.riceImg').innerHTML = `<img src="./img/${waterHeight}cm.png" style="width:100%; height:80%;">`;
+	document.querySelector('.riceImg').innerHTML = `<img src="./img/${waterHeight}cm.PNG" style="width:100%; height:80%;">`;
 	document.querySelector('.waterHeightDraw').innerHTML = `물깊이 : ${waterHeight}cm`;
 }
 
@@ -264,7 +264,7 @@ milling = function() {
 	<div class="completeMilling"></div>
 	`;
 	for(i=0 ; i<9 ; i++) {
-		document.querySelector('.dragStart').innerHTML += `<img id="rice${i}" data-id="벼" src="./img/벼.png" draggable="true" ondragstart="drag(event)" style="width:80px;height:80px;display:inline;padding:20px;">`;	
+		document.querySelector('.dragStart').innerHTML += `<img id="rice${i}" data-id="벼" src="./img/벼.PNG" draggable="true" ondragstart="drag(event)" style="width:80px;height:80px;display:inline;padding:20px;">`;	
 	}
 }
 
@@ -287,7 +287,7 @@ function allowDrop(ev)
                 let parent = document.getElementById("drag");
                 parent.removeChild(element);
                 element.setAttribute('data-id', convert[element.getAttribute("data-id")]);
-                element.src = `img/${element.getAttribute("data-id")}.png`;
+                element.src = `img/${element.getAttribute("data-id")}.PNG`;
                 if (element.getAttribute("data-id") === "백미") element.setAttribute("draggable", false);
                 parent.appendChild(element);
 	   if(convertCnt === 18) {
